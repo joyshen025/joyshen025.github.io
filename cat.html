@@ -17,17 +17,20 @@
     }
     .herder_top_phone{
         font-size: 20px;
-        color: azure;
+        color: rgb(255, 255, 255);
         text-decoration: none;
         padding-top: 25px;
         padding-left: 70px;
     }
     .herder_top_phone a{
         text-decoration: none;
-        color: azure;
+        color: rgb(255, 255, 255);
+        transition: 1s;
+    }
+    .herder_top_phone a:hover{
+        color:#FF9933
     }
     .herder_lower{
-        /* background-color: gray; */
         align-items: center;
         display: flex;
         justify-content: space-around;
@@ -35,7 +38,6 @@
     }
     .herder_lower_left{
         display: flex;
-        /* padding: 25px; */
         text-decoration: none;
     }
     .herder_lower_left_Anilove a{
@@ -50,20 +52,30 @@
     .herder_lower_center a{
         text-decoration: none;
         color: #535353;
+        transition: 0.5s;
+        padding: 20px 0px;
+    }
+    .herder_lower_center a:hover{
+        border-bottom:4px solid #FF9933;
     }
     .herder_lower_center ul{
         list-style-type:none;
         font-size: 20px;
         display: flex;
     }
-    .herder_lower_right{
-        width: 150px;
-        height: 50px;
-        background-color:#FF9933;
+    .herder_lower_right a{
+        background-color:#ffffff;
+        border: 3px solid #FF9933;
         text-align: center;
+        transition: 0.5s;
+        padding: 17px 25px;  
+        text-decoration: none;
+        color: #FF9933;
     }
-    .herder_lower_right_text{
-         padding: 17px 0px;     /*字體預設16px*/
+    .herder_lower_right a:hover{
+        background-color: #7ABEE9;
+        border:3px solid #7ABEE9;
+        color: rgb(255, 255, 255);
     }
     .cat{
         width: 100%;
@@ -89,17 +101,21 @@
         margin: 50px;
     }
     .cat_button{
+        margin: 60px 0px;
+    }
+    .cat_button a{
         background-color: #FF9933;
         color: #ffffff;
-        height: 70px;
-        width: 225px;
         text-align: center;
-        margin: 30px 0px;
-    }
-    .cat_button_text{
+        text-decoration: none;
         font-size: 16px;
-        padding: 27px 0px;
+        padding: 23px 55px;
+        transition: 0.5s;
     }
+    .cat_button a:hover{
+        background-color:#272626
+    }
+
     .dog{
         display: flex;
         align-items: center;
@@ -112,16 +128,19 @@
         width: 50%;
     }
     .dog_right_button{
+        margin: 50px 0px;
+    }
+    .dog_right_button a{
         background-color: #FF9933;
         color: #ffffff;
-        height: 70px;
-        width: 225px;
         text-align: center;
-        margin: 30px 0px;
-    }
-    .dog_right_button_text{
+        text-decoration: none;
         font-size: 16px;
-        padding: 27px 0px;
+        padding: 25px 45px;
+        transition:0.5s;
+    }
+    .dog_right_button a:hover{
+        background-color: #272626;
     }
     .dog_right_text h1{
         font-size: 55px;
@@ -155,34 +174,45 @@
     .card_img{
         display: flex;
         justify-content:center;
-
+        color: white;
+        font-size: 35px;
+        
     }
     .card_img_left{
-        height: 450px;
+        height: 420px;
         width: 30%;
-        /* background-color: #FF9933; */
         background-image: url(./data/asset\ 5.jpeg);
         background-size:cover;
         background-repeat: no-repeat;
         margin: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 30px 0px;
     }
     .card_img_center{
-        height: 450px;
+        height: 420px;
         width: 30%;
-        /* background-color: #FF9933; */
         background-image: url(./data/asset\ 6.jpeg);
         background-size:cover;
         background-repeat: no-repeat;
         margin: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 30px 0px;
     }
     .card_img_right{
-        height: 450px;
+        height: 420px;
         width: 30%;
-        /* background-color: #FF9933; */
         background-image: url(./data/asset\ 7.jpeg);
         background-size:cover;
         background-repeat: no-repeat;
         margin: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 30px 0px;
     }
 
 
@@ -192,7 +222,7 @@
         <div class="herder">
             <div class="herder_top">
                 <div class="herder_top_phone">
-                    <p>Toll-free:<a href="">(123) 456-7890</a> </p>
+                    <p>Toll-free:<a href="">(123) 456-7890</a></p>
                 </div>
             </div>
             <div class="herder_lower">
@@ -215,7 +245,7 @@
                         </ul>
                 </div>
                 <div class="herder_lower_right">
-                    <div class="herder_lower_right_text"><p>DONATE NOW!</p></div>  
+                    <a " href="">DONATE NOW!</a>
                 </div>
             </div>
         </div>
@@ -225,7 +255,7 @@
                 <h1>YOUR Help!</h1>
                 You can chip in with money & effort!
                 <div class="cat_button">
-                    <div class="cat_button_text"><p>DONATE NOW!</p></div>
+                        <a href="">DONATE NOW!</a>
                 </div>
             </div>
         </div>
@@ -241,7 +271,8 @@
                     <p>All in all, with thousands of animals saved off the streets and cared for every year, we hope to encourage much more pet adoptions to happen!</p>
                 </div>
                 <div class="dog_right_button">
-                    <div class="dog_right_button_text"><p>LEARN MORE</p></div>
+                    <a href="">LEARN MORE</a>
+                </div>
                 </div>
             </div>
         </div>
@@ -252,13 +283,13 @@
             </div>
             <div class="card_img">
                 <div class="card_img_left">
-                    <p>Volunteer</p>
+                    <p><strong>Volunteer</strong></p>
                 </div>
                 <div class="card_img_center">
-                    <p>Adopt</p>
+                    <p><strong>Adopt</strong></p>
                 </div>
                 <div class="card_img_right">
-                    <p>Sponsor</p>
+                    <p><strong>Sponsor</strong></p>
                 </div>
             </div>
         </div>
