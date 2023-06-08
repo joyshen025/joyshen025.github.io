@@ -107,7 +107,6 @@
 
         .drive .img {
             float: right;
-            
         }
 
         .drive .title {
@@ -137,6 +136,9 @@
         .Safety .grey {
             top: -50px;
             right: 150px;
+        }
+        .Safety .info{
+            flex-direction: row-reverse; 
         }
 
         .comfortable .img {
@@ -172,6 +174,9 @@
             top: -50px;
             right: 150px;
         }
+        .CarPlay .info{
+            flex-direction: row-reverse; 
+        }
 
         .design .img {
             float: right;
@@ -193,12 +198,28 @@
 
         h3::after {
             content: '';
-            display:inline-block;
+            display: inline-block;
             height: 2px;
             width: 430px;
             background-color: brown;
             margin-left: 10px;
             margin-bottom: 5px;
+        }
+
+        .yt1 {
+            position: relative;
+            z-index: 9999;
+            top: 200px;
+            right: -800px;
+            width: 20px;
+        }
+
+        .yt2 {
+            position: relative;
+            z-index: 9999;
+            top: -200px;
+            left: -20px;
+            width: 20px;
         }
     </style>
 
@@ -213,6 +234,9 @@
                 <div class="grey"></div>
                 <div class="img">
                     <img src=".//data3/01.png" alt="">
+                </div>
+                <div class="yt1">
+                    <img src="./data3/icon-youtube.png" alt="">
                 </div>
                 <div class="title">
                     <div class="info">
@@ -243,6 +267,9 @@
                 <div class="img">
                     <img src=".//data3/02.png" alt="">
                 </div>
+                <div class="yt2">
+                    <img src="./data3/icon-youtube.png" alt="">
+                </div>
                 <div class="title">
                     <div class="info">
                         <p>02</p>
@@ -270,6 +297,9 @@
                 <div class="grey"></div>
                 <div class="img">
                     <img src=".//data3/03.png" alt="">
+                </div>
+                <div class="yt1">
+                    <img src="./data3/icon-youtube.png" alt="">
                 </div>
                 <div class="title">
                     <div class="info">
@@ -300,10 +330,14 @@
                 <div class="img">
                     <img src=".//data3/04.png" alt="">
                 </div>
+                <div class="yt2">
+                    <img src="./data3/icon-youtube.png" alt="">
+                </div>
                 <div class="title">
                     <div class="info">
                         <p>04</p>
                         <h2>以人為本</h2>
+
                     </div>
                     <div class="desc">
                         <h2>使用者導向的貼心設計</h2>
@@ -326,6 +360,9 @@
                 <div class="grey"></div>
                 <div class="img">
                     <img src=".//data3/05.png" alt="">
+                </div>
+                <div class="yt1">
+                    <img src="./data3/icon-youtube.png" alt="">
                 </div>
                 <div class="title">
                     <div class="info">
