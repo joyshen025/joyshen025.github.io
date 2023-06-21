@@ -34,12 +34,14 @@ a {
     object-fit: cover;
     height: 230px;
 }
-.group-content{
+
+.group-content {
     padding: 0px;
 }
+
 .group-title {
     margin-left: 10px;
-    font-size: 12px;    
+    font-size: 12px;
 }
 
 .group-info a {
@@ -47,6 +49,7 @@ a {
     color: #f65936;
     font-size: 13px;
 }
+
 .motif-text {
     width: 100%;
     padding: 15px;
@@ -86,10 +89,11 @@ a {
 }
 
 .card .card-img img {
-    aspect-ratio : 3 / 2 ;
+    aspect-ratio: 3 / 2;
     border-radius: 10px;
     object-fit: cover;
 }
+
 .card .card-text {
     padding: 14px 0px;
     font-size: 13px;
@@ -112,14 +116,15 @@ a {
     white-space: nowrap;
     position: relative;
 }
-.card .card-title span::after{
+
+.card .card-title span::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 4em;
-    background-image: linear-gradient(270deg,#fff, transparent);
+    background-image: linear-gradient(270deg, #fff, transparent);
 
 }
 
@@ -131,29 +136,35 @@ a {
     .card-book {
         display: flex;
     }
+
     .motif-text {
         display: flex;
     }
 
-    .card-book:nth-of-type(4n){
+    .card-book:nth-of-type(4n) {
         flex-direction: row-reverse;
     }
-    .motif-text .title{
+
+    .motif-text .title {
         width: 49%;
     }
-    .motif-text .title-text{
+
+    .motif-text .title-text {
         width: 49%;
     }
-    img{
+
+    img {
         border-radius: 10px;
     }
-    .group-content{
+
+    .group-content {
         padding: 10px;
     }
 }
+
 @media screen and (min-width: 1024px) {
-.group-title {
-    display: flex;
-    align-items: center;
-}
+    .group-title {
+        display: flex;
+        align-items: center;
+    }
 }
