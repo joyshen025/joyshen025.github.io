@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <style>
+    .btn-outline-primary {
+      width: 200px;
+    }
+
+    h2 span {
+      color: #9b9b9b;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="container mb-5">
+    <div class="row col-12">
+      <div class="title d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+          <label onclick="iphoneClickBnt()" class="btn btn-outline-primary " for="btnradio1">iphone 14</label>
+
+          <input type="radio" class="btn-check " name="btnradio" id="btnradio2" autocomplete="off">
+          <label onclick="ipadProClickBnt()" class="btn btn-outline-primary mx-2 " for="btnradio2">ipad Pro</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+          <label onclick="iMacClickBnt()" class="btn btn-outline-primary " for="btnradio3">iMac</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex justify-content-between">
+    <div class="row col-6">
+      <div class="pic w-100">
+        <img id="圖片" class="w-100" src="./apple-pic/ipad-select-gallery-1-202212.jpg" alt="">
+      </div>
+    </div>
+    <div class="row col-5" id="內容">
+      <h2>外觀。<span>挑選喜愛的顏色。</span></h2>
+      <div id="外觀按鈕Div" class="btn-group mb-5" role="group" aria-label="Basic radio toggle button group">
+        <!-- <button class="btn btn-primary"></button> -->
+      </div>
+      <h2>容量</h2>
+      <div id="容量按鈕Div" class="btn-group mb-5" role="group " aria-label="Basic radio toggle button group">
+        <!-- <button class="btn btn-primary"></button> -->
+      </div>
+      <h2>網路</h2>
+      <div id="網路按鈕Div" class="btn-group mb-5" role="group" aria-label="Basic radio toggle button group">
+        <!-- <button class="btn btn-primary" ></button> -->
+      </div>
+
+      <h2 id="價格"></h2>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+
+
+    <script>
+
+      
+
+let iPadProList = [
+    { "color": "太空灰色", "price": 18900, "storage": "128GB", "network": "Wi-Fi", "picture": "./apple-pic/ipad_gray.jpg" },
+    { "color": "銀色", "price": 18900, "storage": "128GB", "network": "Wi-Fi", "picture": "./apple-pic/ipad-silver.jpg" },
+    { "color": "太空灰色", "price": 23900, "storage": "256GB", "network": "Wi-Fi", "picture": "./apple-pic/ipad_gray.jpg" },
+    { "color": "銀色", "price": 23900, "storage": "256GB", "network": "Wi-Fi", "picture": "./apple-pic/ipad-silver.jpg" },
+    { "color": "太空灰色", "price": 23200, "storage": "128GB", "network": "Wi-Fi+行動網路", "picture": "./apple-pic/ipad_gray.jpg" },
+    { "color": "銀色", "price": 23200, "storage": "128GB", "network": "Wi-Fi+行動網路", "picture": "./apple-pic/ipad-silver.jpg" },
+    { "color": "太空灰色", "price": 28200, "storage": "256GB", "network": "Wi-Fi+行動網路", "picture": "./apple-pic/ipad_gray.jpg" },
+    { "color": "銀色", "price": 28200, "storage": "256GB", "network": "Wi-Fi+行動網路", "picture": "./apple-pic/ipad-silver.jpg" },];
+
+      let 外觀種類清單 = [];
+      let 容量種類清單 = [];
+      let 網路種類清單 = [];
+
+
+      iPadProList.forEach(function (資料) {
+        外觀種類清單.push(資料.color);
+        容量種類清單.push(資料.storage);
+        網路種類清單.push(資料.network);
+      });
+
+
+      // [外觀種類清單],  [顏色],  [流水號]
+      // 外觀種類清單,太空灰,0
+      // 外觀種類清單,粉紅色,1
+      // 外觀種類清單,粉紅色,2
+
+      //// value=物件color, index=流水號[?], self=清單自己本身
+      let 不重複外觀種類清單 = 外觀種類清單.filter(function (value, index, self) {
+        return self.indexOf(value) === index;
+      });
+
+      let 不重複容量種類清單 = 容量種類清單.filter(function (value, index, self) {
+        return self.indexOf(value) === index;
+      });
+      let 不重複網路種類清單 = 網路種類清單.filter(function (value, index, self) {
+        return self.indexOf(value) === index;
+      });
+
+
+
+      let 要加入的外觀區塊目標 = document.getElementById("外觀按鈕Div");
+      let 要加入的容量區塊目標 = document.getElementById("容量按鈕Div");
+      let 要加入的網路區塊目標 = document.getElementById("網路按鈕Div");
+
+
+      function ipadProClickBnt() {
+        要加入的外觀區塊目標.innerHTML = '';
+        要加入的容量區塊目標.innerHTML = '';
+        要加入的網路區塊目標.innerHTML = '';
+        document.getElementById('價格').innerHTML = '';
+        createDiv();
+        註冊();
+      }
+
+      function createDiv() {
+        不重複外觀種類清單.forEach(function (外觀, index) {
+          if (index == 0) {
+            要加入的外觀區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="外觀btnradio" id="外觀btnradio${index}" autocomplete="off" data-參數="${外觀}" data-類別="外觀" checked>
+          <label class="btn btn-outline-primary" for="外觀btnradio${index}">${外觀} </label>`;
+          }
+          else {
+            要加入的外觀區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="外觀btnradio" id="外觀btnradio${index}" autocomplete="off" data-參數="${外觀}" data-類別="外觀">
+          <label class="btn btn-outline-primary" for="外觀btnradio${index}">${外觀}</label>`;
+          }
+        });
+
+
+        不重複容量種類清單.forEach(function (容量, index) {
+          if (index == 0) {
+            要加入的容量區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="容量btnradio" id="容量btnradio${index}" autocomplete="off" data-參數="${容量}" data-類別="容量" checked>
+          <label class="btn btn-outline-primary" for="容量btnradio${index}">${容量} </label>`;
+          }
+          else {
+            要加入的容量區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="容量btnradio" id="容量btnradio${index}" autocomplete="off" data-參數="${容量}" data-類別="容量">
+          <label class="btn btn-outline-primary" for="容量btnradio${index}">${容量}</label>`;
+          }
+        });
+
+
+        不重複網路種類清單.forEach(function (網路, index) {
+          if (index == 0) {
+            要加入的網路區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="網路btnradio" id="網路btnradio${index}" autocomplete="off" data-參數="${網路}" data-類別="網路" checked>
+          <label class="btn btn-outline-primary" for="網路btnradio${index}">${網路} </label>`;
+          }
+          else {
+            要加入的網路區塊目標.innerHTML += `<input type="radio" class=" infoBtn btn-check" name="網路btnradio" id="網路btnradio${index}" autocomplete="off" data-參數="${網路}" data-類別="網路">
+          <label class="btn btn-outline-primary" for="網路btnradio${index}">${網路}</label>`;
+          }
+        });
+      }
+
+
+      function 註冊(){
+        // 當網頁的DOM結構載入完成後執行的函式
+        //// 將所有的功能按鈕綁上click事件
+        let 全部功能按鈕 = document.getElementsByClassName("infoBtn");
+
+        for (var i = 0; i < 全部功能按鈕.length; i++) {
+          // 為每個功能按鈕添加click事件監聽器，當按鈕被點擊時執行getInfo函式
+          全部功能按鈕[i].addEventListener('click', getInfo);
+        }
+      }
+
+
+
+      //// 用來觸發上面規格選項
+      function getInfo() {
+        let 外觀參數 = '';
+        let 容量參數 = '';
+        let 網路參數 = '';
+
+
+
+        //// 抓到按鈕上的參數
+        let infoBtnList = document.getElementsByClassName("infoBtn");
+        for (var i = 0; i < infoBtnList.length; i++) {
+          if (infoBtnList[i].checked == true) {
+
+            if (infoBtnList[i].dataset.類別 == "外觀") {
+              外觀參數 = infoBtnList[i].dataset.參數;
+            }
+
+            if (infoBtnList[i].dataset.類別 == "容量") {
+              容量參數 = infoBtnList[i].dataset.參數;
+            }
+
+            if (infoBtnList[i].dataset.類別 == "網路") {
+              網路參數 = infoBtnList[i].dataset.參數;
+            }
+          }
+        }
+
+
+
+
+        //// 透過這個參數在清單中找到對應的資訊
+        //// 並且將資訊顯示在畫面上
+        let 結果 = iPadProList.filter(function (item) {
+          return item.color === 外觀參數 && item.storage === 容量參數 && item.network === 網路參數;
+        })[0];
+
+        //// 例如:太空灰色,128GB,WiFi = 顯示價錢
+        let 價格參數 = document.getElementById('價格');
+        價格參數.innerHTML = '價格：' + 結果.price;
+
+        let 圖片 = document.getElementById('圖片');
+        圖片.src = 結果.picture;
+      }
+
+    </script>
+
+
+</body>
+
+</html>
