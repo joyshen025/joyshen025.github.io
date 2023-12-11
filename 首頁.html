@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        max-width: 1080px;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        position: absolute;
+        width: 168px;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .meun {
+        padding-left: 15px;
+        padding-top: 30px;
+        margin-left: 200px;
+        text-align: left;
+        display: flex;
+    }
+
+    .meun li {
+        list-style: none;
+        padding: 0 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .container-card {
+        width: 100vw;
+        max-width: 100%;
+        text-align: center;
+        background-color: gainsboro;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+
+    .container-card * {
+        margin: auto;
+        width: 500px;
+        text-align: center;
+    }
+
+    .container {
+        overflow: hidden;
+        padding: 15px 0;
+    }
+
+    .container img {
+        margin: 0;
+    }
+
+    .container-text {
+        padding: 15px 0;
+    }
+
+    .footer {
+        background-color: #1c5e70;
+        display: flex;
+        padding: 50px;
+    }
+
+    .footer-text {
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+    }
+
+    .footer-text>div {
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    .footer-text span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .button {
+        background-color: white;
+        border: solid;
+        border-width: 1px;
+        border-radius: 99px;
+        color: gray;
+        padding: 6px 15px 7px 15px;
+        margin-left: 30px;
+        margin-top: 32px;
+    }
+
+    .icon-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-card a {
+        margin: 20px 30px;
+    }
+
+    .icon {
+        background-color: rgba(69, 129, 142, 1.0);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+    .other img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+
+    <div>
+        <div class="header">
+            <div class="logo">
+                <h1>
+                    <a href="./首頁.html">
+                        <img src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
+                    </a>
+
+                </h1>
+            </div>
+            <div class="meun">
+                <li>
+                    <a href="./集團簡介.html">集團簡介</a>
+                </li>
+                <li>
+                    <a href="./關係企業.html">關係企業及社會責任</a>
+                </li>
+                <li>
+                    <a href="">人才招募</a>
+                </li>
+                <li>
+                    <a href="./新聞媒體.html">新聞媒體</a>
+                </li>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="container-card">
+                <div class="container-banner">
+                    <h3>關於我們</h3>
+                </div>
+                <div class="container">
+                    <div class="container-img">
+                        <img src="https://s3-alpha-sig.figma.com/img/930f/e58b/98bee7cdac60d9c0e591430d586257db?Expires=1703462400&Signature=JMWPp0nMbR0ykneksN~7nm8FSm-B1r1nhHJHiFf-GfmvgFlY0llib7NumJqAyZKsHfw3bkggerxsWwg8PuNr8bnPlfJAtl-35eDw53dy7EAdUPaP-uXrIi95whoYDf2iON-UbnIdwiCOAlQZUMkgBtfQrsIrMv87SEuN0JBMvepG26MOFgtelJ~lGIM2sbDYVgzI876MhDYsrwRoPjUbZ7RxROwBmkjI~1ZXRrGsEK2t-RxK3658KxwkeBfiB7F1M67E5o2n43hrCm756KIRlKo9OeI5iVY5YCL2bmpWS3Gos5gGmuQxMneOYVyI32pqfdTPgAPM6THKn9OeCt73og__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                    </div>
+
+                    <div class="container-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius quasi!
+                            Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
+                            Mollitia nam impedit sed possimus libero.</p>
+                    </div>
+
+                    <div class="container-button" style="display: flex;">
+                        <a class="button" href=""><span style="color: black;">經營理念</span></a>
+                        <a class="button" href=""><span style="color: black;">集團歷史</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-card" style="background-color: white;">
+                <div class="container-banner">
+                    <h3>社會關係與責任</h3>
+                </div>
+                <div class="icon-card">
+                    <a href="">
+                        <div class="icon"></div>
+                    </a>
+                    <a href="">
+                        <div class="icon"></div>
+                    </a>
+                    <a href="">
+                        <div class="icon"></div>
+                    </a>
+                    <a href="">
+                        <div class="icon"></div>
+                    </a>
+                    <a href="">
+                        <div class="icon"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-card">
+                <div class="container-banner">
+                    <h3>發展目標</h3>
+                </div>
+                <div class="container">
+                    <img src="https://s3-alpha-sig.figma.com/img/5729/e73a/e568e4dc6cf1da793fc1bceef4e23d22?Expires=1703462400&Signature=lFSvBbIJAF3fF62dikhAZRp9pwAqwT5yw5Z2xRaevrtfAlqdfdCoaiYFgYJIHjSfZHVQirlbsTAQRJTlb3ZB6ey5X9Sc3GGspWSfIslkFaPZG1BYgOcWzljf7GoRRMI3oc0Gmj25FZ1tpXTV9T8Yyv7Enjk8lUHwH9NDSpvd-FAf6BQ77U32XPee397jNNg51bp0MCVclvtW4FWaavYATpI-9RD8lCc9FL7hsS7ZPkmxZK41S~0DxKrnC91LAUJI2jp0n4fUOIjE-UNVcsPh~xAbvCnOBo6pWiXyuCLz3wjJZvLDuTNYCTgzk8Tt3cIOV2g5mOmmpW2UocjDGitgxA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                    <div class="container-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius quasi!
+                            Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
+                            Mollitia nam impedit sed possimus libero.</p>
+                    </div>
+                    <div class="container-button" >
+                        <a class="button" style="padding: 6px 100px;" href=""><span style="color: black;">更多資訊</span></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-card" style="background-color: white;">
+                <div class="container-banner">
+                    <h3>人才招募</h3>
+                </div>
+                <div class="container">
+                    <img src="https://s3-alpha-sig.figma.com/img/d8c7/00b9/73fffe6bbe2895a33f506d7557e88d2c?Expires=1703462400&Signature=jAbdkf-4HsHbepFLOlV8GXFxjjQ5m3P8sSslz3irxpvjnc14SsNdJ9sOryMvREYAkwv8xQDqiBusNsC7oq~XXORXp-ovObZEIK5XCzDAlHc3HqX0a4roUTw8HRsrRDu-aO-EFMTs99Fbiv8MGBODrPmOCqW5bYdL5H~Vob6CBkVoL4USP7HH-KY0qyeWGEhcjwIj~TG5EWNddcI9O7pXvBYxQce1ubHzJgCsJl0lA-BdCbhOcmqd9aCJ3MjZk9zSuJ1sa6FUjSenuUX8dbORZp3ixMYz63aEZuacIUsmPzSeiAFRdCrcRkIE~kyXBoH4zavsTjOGwSgbQjep7ocWgw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                    <div class="container-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius quasi!
+                            Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
+                            Mollitia nam impedit sed possimus libero.</p>
+                    </div>
+                    <div class="container-button" >
+                        <a class="button" style="padding: 6px 100px;" href=""><span style="color: black;">更多資訊</span></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="other">
+                <div>
+                    <img src="https://s3-alpha-sig.figma.com/img/b91d/3ba9/99f33fd904da27ef705a135354ab91c7?Expires=1703462400&Signature=oml~nkWAY~WEXmb1qhsXvQVwfiOjwDdR1-DojbBATJ1Vf~8~RgHlT8J2ttcKyaiihSEcXUVTS45v4MZx00MD~aINL-gqCKOuIc7yKqSmuhIoZ7Cb~COvZAIsvR5Ygv0c1DA5Byf32yuipG9GX6RuMAPA4Q-E99RZ01rfvBKv4J4svu2ogQkprKnbnJCURmMT0iepJ1PlYnJtlGXl5nq3-kl3RCBp7yM9lIn0XHU0QO4C7I~YkwkqiKCglI8-SVrxj4D5CGWrS4QRRowp5yAoDbxa5540~GTDD3VSa2TTmXENFqchT3XeqcHIZSoHTggO1YSj7k8ycyuJsHm9tCIbgQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                </div>
+                <div>
+                    <img src="https://s3-alpha-sig.figma.com/img/b878/ac4e/7e7b928d87ca2615d1434efdc75aa3b6?Expires=1703462400&Signature=iv6P5pK7lVEcFWFu3r5awEjNv1RwF3jKJ8pgCoPeKZfqfrOKx9yhqQhqTzwMiVow8xCGK97HpIiiJFux-qHE7TLzL-aBO6jV1X2TH3b2pym4g00DSnTWW9miwtPISE6qUbtZzUvdfRgLDTRIvXRNqtuECagcPKDVVB8cNEhfeQZ7pf5hwogOdz9pHM9SIhP1G45JJa0JgEdHX1a0bcETZ6-mQH~WEUKZUpu2rRuzJs3TdVH~fmh4AFqLopci6F1L3wPpnTOfmbytfUDPvzzSw~wmriCuBzi5ctRfdVw9IZOliyL75sY~QSxG3uqhMA-uw7DsDGTSiPkdeclFiTiDWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+
+            </div>
+            <div class="logo">
+                <h1>
+                    <img src="https://s3-alpha-sig.figma.com/img/2d81/927f/f25bbfa86df9e7ef391c57d38b3f5cbc?Expires=1703462400&Signature=cZIRlOKzKp~7r3dsLtr~U4g3RONIYBqSQKZjh8P1m5c5aYkNqQafkPMDbKHJsBcXKgoPQOrvPMwnWomXJbZ5NvjfNNelNLsflieIRnd3Fce3dz8OSa1raqAfOlKkonIfZza1w70YqmmJaT0SgCrvgZZ-DsYHphzxMqwS3q7lH-7ilQ0IOW0~lrbbIP-g1CgckOa~uYnQJdNJh1X40DrLYdnP~UKudj~tWO5RvTZvh0VGAy4I53UYBybFJqOAUKcDDaK1JJVm9rcJAEkYu~yydK7SoTi6LkS0DNj43FleNAbu5nIhwopW2t4sM1gZ1DD71DKRcHWECFUIaXeADslF3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="五泰不動產">
+                </h1>
+            </div>
+            <div class="footer-text col-xl-12">
+                <div>
+                    <p><span>隱私權政策</span></p>
+                    <p><span>網站地圖</span></p>
+                </div>
+                <div>
+
+                    <p>
+                        <span>相關企業</span>
+                    </p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                </div>
+                <div>
+
+                    <p>
+                        <span>社會責任</span>
+                    </p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                    <p>五泰房仲有限公司</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
