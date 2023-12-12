@@ -65,7 +65,8 @@
         overflow: hidden;
         padding: 15px 0;
     }
-    .container img{
+
+    .container img {
         max-width: 100%;
     }
 
@@ -75,16 +76,25 @@
         padding: 15px 0;
     }
 
-    .footer {
+    .footer-card {
         background-color: #1c5e70;
+        padding: 3%;
+    }
+
+    .footer {
+        justify-content: space-between;
         display: flex;
-        padding: 50px;
     }
 
     .footer-text {
         display: flex;
         justify-content: flex-end;
         color: white;
+    }
+
+    .footer-text p {
+        font-size: 12px;
+        margin-bottom: 3px;
     }
 
     .footer-text>div {
@@ -144,26 +154,61 @@
         justify-content: center;
     }
 
+    hr {
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+        opacity: 1;
+    }
+
+    .copy-right {
+        margin-top: 100px;
+        width: 100%;
+
+    }
+
     @media screen and (max-width: 1080px) {
         .web-page {
             display: none;
         }
+
         .icon-card a:nth-child(n+4) {
             display: none;
         }
-        .footer {
+
+        .footer-card {
             display: block;
         }
+
         .footer-text {
             margin-top: 80px;
         }
-        .other img{
+
+        .other img {
             height: 137px;
         }
+
+
     }
+
     @media screen and (min-width: 1080px) {
         .phone {
             display: none;
+        }
+
+        .copy-right {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            opacity: 1;
+        }
+        .copy-right-hr{
+            margin-top: 5px;
+            padding-right: 1%;
+            width: 70%;
         }
     }
 </style>
@@ -178,7 +223,7 @@
                         <a href="./首頁.html">
                             <img src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
                         </a>
-    
+
                     </h1>
                 </div>
                 <div class="meun">
@@ -196,51 +241,52 @@
                     </li>
                 </div>
             </div>
-            
+
             <div class="phone" style="margin-bottom: 100px;">
-            <nav class="navbar navbar-dark bg-white fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./首頁.html">
-                        <img width="250px" src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
-                    <span class="navbar-toggler-icon" style="color: grey;"></span>
-                </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="./集團簡介.html">集團簡介</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="">人才招募</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-success" type="submit">Search</button>
-                            </form>
+                <nav class="navbar navbar-dark bg-white fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./首頁.html">
+                            <img width="250px" src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
+                            <span class="navbar-toggler-icon" style="color: grey;"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./集團簡介.html">集團簡介</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">人才招募</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
             </div>
 
 
@@ -338,49 +384,63 @@
                         alt="">
                 </div>
                 <div>
-                    <img  src="https://s3-alpha-sig.figma.com/img/b878/ac4e/7e7b928d87ca2615d1434efdc75aa3b6?Expires=1703462400&Signature=iv6P5pK7lVEcFWFu3r5awEjNv1RwF3jKJ8pgCoPeKZfqfrOKx9yhqQhqTzwMiVow8xCGK97HpIiiJFux-qHE7TLzL-aBO6jV1X2TH3b2pym4g00DSnTWW9miwtPISE6qUbtZzUvdfRgLDTRIvXRNqtuECagcPKDVVB8cNEhfeQZ7pf5hwogOdz9pHM9SIhP1G45JJa0JgEdHX1a0bcETZ6-mQH~WEUKZUpu2rRuzJs3TdVH~fmh4AFqLopci6F1L3wPpnTOfmbytfUDPvzzSw~wmriCuBzi5ctRfdVw9IZOliyL75sY~QSxG3uqhMA-uw7DsDGTSiPkdeclFiTiDWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    <img src="https://s3-alpha-sig.figma.com/img/b878/ac4e/7e7b928d87ca2615d1434efdc75aa3b6?Expires=1703462400&Signature=iv6P5pK7lVEcFWFu3r5awEjNv1RwF3jKJ8pgCoPeKZfqfrOKx9yhqQhqTzwMiVow8xCGK97HpIiiJFux-qHE7TLzL-aBO6jV1X2TH3b2pym4g00DSnTWW9miwtPISE6qUbtZzUvdfRgLDTRIvXRNqtuECagcPKDVVB8cNEhfeQZ7pf5hwogOdz9pHM9SIhP1G45JJa0JgEdHX1a0bcETZ6-mQH~WEUKZUpu2rRuzJs3TdVH~fmh4AFqLopci6F1L3wPpnTOfmbytfUDPvzzSw~wmriCuBzi5ctRfdVw9IZOliyL75sY~QSxG3uqhMA-uw7DsDGTSiPkdeclFiTiDWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                         alt="">
                 </div>
             </div>
         </div>
 
-        <div class="footer">
-            <div class="logo">
-                <h1>
-                    <img src="https://s3-alpha-sig.figma.com/img/2d81/927f/f25bbfa86df9e7ef391c57d38b3f5cbc?Expires=1703462400&Signature=cZIRlOKzKp~7r3dsLtr~U4g3RONIYBqSQKZjh8P1m5c5aYkNqQafkPMDbKHJsBcXKgoPQOrvPMwnWomXJbZ5NvjfNNelNLsflieIRnd3Fce3dz8OSa1raqAfOlKkonIfZza1w70YqmmJaT0SgCrvgZZ-DsYHphzxMqwS3q7lH-7ilQ0IOW0~lrbbIP-g1CgckOa~uYnQJdNJh1X40DrLYdnP~UKudj~tWO5RvTZvh0VGAy4I53UYBybFJqOAUKcDDaK1JJVm9rcJAEkYu~yydK7SoTi6LkS0DNj43FleNAbu5nIhwopW2t4sM1gZ1DD71DKRcHWECFUIaXeADslF3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="五泰不動產">
-                </h1>
-            </div>
-            <div class="footer-text col-xl-12">
-                <div>
-                    <p><span>隱私權政策</span></p>
-                    <p><span>網站地圖</span></p>
+        <div class="footer-card">
+            <div class="footer">
+                <div class="logo">
+                    <h1>
+                        <img src="https://s3-alpha-sig.figma.com/img/2d81/927f/f25bbfa86df9e7ef391c57d38b3f5cbc?Expires=1703462400&Signature=cZIRlOKzKp~7r3dsLtr~U4g3RONIYBqSQKZjh8P1m5c5aYkNqQafkPMDbKHJsBcXKgoPQOrvPMwnWomXJbZ5NvjfNNelNLsflieIRnd3Fce3dz8OSa1raqAfOlKkonIfZza1w70YqmmJaT0SgCrvgZZ-DsYHphzxMqwS3q7lH-7ilQ0IOW0~lrbbIP-g1CgckOa~uYnQJdNJh1X40DrLYdnP~UKudj~tWO5RvTZvh0VGAy4I53UYBybFJqOAUKcDDaK1JJVm9rcJAEkYu~yydK7SoTi6LkS0DNj43FleNAbu5nIhwopW2t4sM1gZ1DD71DKRcHWECFUIaXeADslF3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="五泰不動產">
+                    </h1>
                 </div>
-                <div>
+                <div class="footer-text col-xl-12">
+                    <div>
+                        <p><span>隱私權政策</span></p>
+                        <p><span>網站地圖</span></p>
+                    </div>
+                    <div>
 
-                    <p>
-                        <span>相關企業</span>
-                    </p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                </div>
-                <div>
+                        <p>
+                            <span>相關企業</span>
+                        </p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                    </div>
+                    <div>
 
-                    <p>
-                        <span>社會責任</span>
-                    </p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
-                    <p>五泰房仲有限公司</p>
+                        <p>
+                            <span>社會責任</span>
+                        </p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                        <p>五泰房仲有限公司</p>
+                    </div>
                 </div>
             </div>
+            <div class="copy-right">
+                <div class="copy-right-hr">
+                    <hr>
+                    <p style="color: white;">CopyRight 2023 五泰不動產</p>
+                </div>
+                <div>
+                    <img style="width: 100%;"
+                        src="https://s3-alpha-sig.figma.com/img/1b17/856a/e070dcd5cd0912559902b57dc6410b78?Expires=1703462400&Signature=VwEq6CmLAi9iVFC3B00XQ-loDjoXDU3WhbYqsrftP8JZ9VqpCod2-UFsMlNTI5d6xnXUzALYptRv0k33kL43W-2dffFqXzbTq~DJVOAi9P3ZrXYgALeABRVLcLtIZEipwits1bHoBDiIe6lnXLBLq7neUOqHQDybJ~6W45PRamDF5xouE277M9z3FKZuiia3gFe4KtKGb68W7iZKq7mVLF~fjqB02ETGRTlujok9SYAF0JRxkPxOQO3ywgpt~AtwkTUmlR19MDhvKZU5fjG3~O0vNCLaAXMf8yOnGNkm3vB1R6~tk5D9YkRagUklEBUR8pFh0KfowHM7Mu56T3jN3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                </div>
+            </div>
+
         </div>
     </div>
 
