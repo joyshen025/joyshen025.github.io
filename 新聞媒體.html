@@ -15,10 +15,9 @@
     }
 
     .header {
-        max-width: 1080px;
-        margin: auto;
+        margin: 15px 5%;
         text-align: left;
-        margin-bottom: 15px;
+        justify-content: flex-start
     }
 
     .logo {
@@ -29,7 +28,6 @@
 
     .logo img {
         max-width: 100%;
-        height: auto;
         display: block;
     }
 
@@ -62,22 +60,30 @@
     }
 
 
-    .container-card * {
-        margin: auto;
-        width: 500px;
+    .container-card {
+        max-width: 100%;
+        text-align: center;
+        background-color: gainsboro;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
         text-align: center;
     }
 
     .container {
+        max-width: 500px;
         overflow: hidden;
         padding: 15px 0;
     }
 
     .container img {
-        margin: 0;
+        max-width: 100%;
     }
 
+
     .container-text {
+        justify-content: center;
         padding: 15px 0;
     }
 
@@ -143,22 +149,22 @@
     }
 
     .other-industries {
-        width: 33%;
         padding: 15px;
 
     }
 
-    .news {
+    .news-card {
         background-color: gainsboro;
+        padding: 25px 0;
     }
 
     img {
         object-fit: cover;
-        width: 100%;
     }
 
     .other-industries-img {
-        height: 200px;
+        width: 100%;
+        height: 182px;
     }
 
     h5 {
@@ -174,43 +180,142 @@
         padding: 15px 0;
         margin: 0;
     }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .web-page {
+            display: none;
+        }
+
+        .icon-card a:nth-child(n+4) {
+            display: none;
+        }
+
+        .footer {
+            display: block;
+        }
+
+        .footer-text {
+            margin-top: 80px;
+        }
+
+        .other img {
+            height: 137px;
+        }
+
+    }
+
+    @media screen and (min-width: 1080px) {
+        .phone {
+            display: none;
+        }
+
+        .news {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .other-industries {
+            width: 30%;
+            margin: 10px;
+        }
+    }
 </style>
 
 <body>
 
     <div>
         <div class="header">
-            <div class="logo">
-                <h1>
-                    <a href="./首頁.html">
-                        <img src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
-                    </a>
+            <div class="web-page">
+                <div class="logo">
+                    <h1>
+                        <a href="./首頁.html">
+                            <img src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
+                        </a>
 
-                </h1>
+                    </h1>
+                </div>
+                <div class="meun">
+                    <li>
+                        <a href="./集團簡介.html">集團簡介</a>
+                    </li>
+                    <li>
+                        <a href="./關係企業.html">關係企業及社會責任</a>
+                    </li>
+                    <li>
+                        <a href="">人才招募</a>
+                    </li>
+                    <li>
+                        <a href="./新聞媒體.html">新聞媒體</a>
+                    </li>
+                </div>
             </div>
-            <div class="meun">
-                <li>
-                    <a href="./集團簡介.html">集團簡介</a>
-                </li>
-                <li>
-                    <a href="./關係企業.html">關係企業及社會責任</a>
-                </li>
-                <li>
-                    <a href="">人才招募</a>
-                </li>
-                <li>
-                    <a href="./新聞媒體.html">新聞媒體</a>
-                </li>
+
+            <div class="phone" style="margin-bottom: 100px;">
+                <nav class="navbar navbar-dark bg-white fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./首頁.html">
+                            <img width="250px" src="https://wutaihouse.com.tw/images/wt-logo.svg" alt="五泰不動產">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
+                            <span class="navbar-toggler-icon" style="color: grey;"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./集團簡介.html">集團簡介</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">人才招募</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
+
+
         </div>
 
+
         <div class="body">
-            <div class="news">
-                <div class="container-banner">
+            <div class="news-card">
+                <div class="container-banner ">
                     <h3>各界肯定</h3>
                 </div>
-                <div style=" display: flex;">
-                    <div class="other-industries">
+                <div class="news">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/65b5/d3ea/6add7a3119dcddaff0bf6c64dcfc002b?Expires=1703462400&Signature=lobcPKViRonnjtukEDbp5ocC9yqd833J2ELw0VJ7k-KxFG1q9hE3ng9b4L-wh1EmGCE8xFWa7igTAqT3zO1IMppgXJHONhX6pdgQNNhFO9O12tVqynwhwsESNpTbrqFzQX4Xl7ImKNtckzTND77ug~sl7whdBkc2D~IF5TuUGJOzTSD~KOmduUbkspYTu5AkQVTCVzMnoZkajl6LSSGjd2WNtKpweRi8SViTGO78OCVy1-lg7yo90JQzltpUVzJft7goOQP9jXsYDd-DPIBewcVSjNdeqA0XvexCHgmf7h00PpAKjWy-qF0~o25ayPru~vMBKXjLbO-RiTQDYbOmTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -226,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/217b/3603/00c95f8a2a1b60c06c6fc46b77a3c280?Expires=1703462400&Signature=dqIF9OhNSHeoNmCmtbYfITYg~EfbNzgF7pt1OdUEfXNY9GZOjBLnF2WoeTN5JWPpahZwRT0JGDMmOjeQfxscrSkrBwGZOYuhs7jMoero3Qs50cHBTGpi59UB7al9vBqdWuGXWD2UFYu6mT1EJQOEUp4ajpGogZOOZXbAj9y16Ttj~W~OgCsAI~YFa2LrrXiIB30ADQLPpKrucJBynLLPl7N6JomWAq~7TKFA1SDLdoHnm0yhzPW38gi9PXESAXLY6os-fhNxDljrUilPorjO4Aq4ZmSDggOq33X594puoloA4yqZrflsgRabNbLUQ-UzbqrxldlCtOWxWkgUZuVSAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -241,7 +346,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/7dd7/0509/aa1350f67193e936db8853080ec194d4?Expires=1703462400&Signature=MxdDqrRphT8d4IvrM3NtcROHwAMNlcsWHTRKMJY5eOGbozBJCs7wqMMSGEX~YbAyg70r1gOmD92iLzjJnd4d6Uok-n3GYeE7G590yo2PghMG0c1S9GkPvxfNjzw8gMy4TPM1HS-RTCQcaNgeeKP6e1milxzq-4cxDxHgAnKvY1suzVl9P2luxv~L7sDHoeKq8f938lBapT4miABsN1omk9Vbn20l6X2nHwvSRP~QCqM-KnWiKpjiiUwOAlWuYqikR3LUK2xU~OOKC~g-fMgCWbgR6uajKvCC8KBQVlGOnHDi5Ey1ZTm83v~yQf6xfaFRtrRD-xix01TDFaIFQ5eO3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -259,13 +364,12 @@
                 </div>
 
             </div>
-
-            <div class="news" style="background-color: white;">
-                <div class="container-banner">
-                    <h3>集團訊息</h3>
+            <div class="news-card" style="background-color: white;">
+                <div class="container-banner ">
+                    <h3>各界肯定</h3>
                 </div>
-                <div style=" display: flex;">
-                    <div class="other-industries">
+                <div class="news">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/65b5/d3ea/6add7a3119dcddaff0bf6c64dcfc002b?Expires=1703462400&Signature=lobcPKViRonnjtukEDbp5ocC9yqd833J2ELw0VJ7k-KxFG1q9hE3ng9b4L-wh1EmGCE8xFWa7igTAqT3zO1IMppgXJHONhX6pdgQNNhFO9O12tVqynwhwsESNpTbrqFzQX4Xl7ImKNtckzTND77ug~sl7whdBkc2D~IF5TuUGJOzTSD~KOmduUbkspYTu5AkQVTCVzMnoZkajl6LSSGjd2WNtKpweRi8SViTGO78OCVy1-lg7yo90JQzltpUVzJft7goOQP9jXsYDd-DPIBewcVSjNdeqA0XvexCHgmf7h00PpAKjWy-qF0~o25ayPru~vMBKXjLbO-RiTQDYbOmTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -281,7 +385,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/217b/3603/00c95f8a2a1b60c06c6fc46b77a3c280?Expires=1703462400&Signature=dqIF9OhNSHeoNmCmtbYfITYg~EfbNzgF7pt1OdUEfXNY9GZOjBLnF2WoeTN5JWPpahZwRT0JGDMmOjeQfxscrSkrBwGZOYuhs7jMoero3Qs50cHBTGpi59UB7al9vBqdWuGXWD2UFYu6mT1EJQOEUp4ajpGogZOOZXbAj9y16Ttj~W~OgCsAI~YFa2LrrXiIB30ADQLPpKrucJBynLLPl7N6JomWAq~7TKFA1SDLdoHnm0yhzPW38gi9PXESAXLY6os-fhNxDljrUilPorjO4Aq4ZmSDggOq33X594puoloA4yqZrflsgRabNbLUQ-UzbqrxldlCtOWxWkgUZuVSAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -296,7 +400,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/7dd7/0509/aa1350f67193e936db8853080ec194d4?Expires=1703462400&Signature=MxdDqrRphT8d4IvrM3NtcROHwAMNlcsWHTRKMJY5eOGbozBJCs7wqMMSGEX~YbAyg70r1gOmD92iLzjJnd4d6Uok-n3GYeE7G590yo2PghMG0c1S9GkPvxfNjzw8gMy4TPM1HS-RTCQcaNgeeKP6e1milxzq-4cxDxHgAnKvY1suzVl9P2luxv~L7sDHoeKq8f938lBapT4miABsN1omk9Vbn20l6X2nHwvSRP~QCqM-KnWiKpjiiUwOAlWuYqikR3LUK2xU~OOKC~g-fMgCWbgR6uajKvCC8KBQVlGOnHDi5Ey1ZTm83v~yQf6xfaFRtrRD-xix01TDFaIFQ5eO3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -312,15 +416,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <div class="news">
-                <div class="container-banner">
-                    <h3>媒體報導</h3>
+            <div class="news-card">
+                <div class="container-banner ">
+                    <h3>各界肯定</h3>
                 </div>
-                <div style=" display: flex;">
-                    <div class="other-industries">
+                <div class="news">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/65b5/d3ea/6add7a3119dcddaff0bf6c64dcfc002b?Expires=1703462400&Signature=lobcPKViRonnjtukEDbp5ocC9yqd833J2ELw0VJ7k-KxFG1q9hE3ng9b4L-wh1EmGCE8xFWa7igTAqT3zO1IMppgXJHONhX6pdgQNNhFO9O12tVqynwhwsESNpTbrqFzQX4Xl7ImKNtckzTND77ug~sl7whdBkc2D~IF5TuUGJOzTSD~KOmduUbkspYTu5AkQVTCVzMnoZkajl6LSSGjd2WNtKpweRi8SViTGO78OCVy1-lg7yo90JQzltpUVzJft7goOQP9jXsYDd-DPIBewcVSjNdeqA0XvexCHgmf7h00PpAKjWy-qF0~o25ayPru~vMBKXjLbO-RiTQDYbOmTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -336,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/217b/3603/00c95f8a2a1b60c06c6fc46b77a3c280?Expires=1703462400&Signature=dqIF9OhNSHeoNmCmtbYfITYg~EfbNzgF7pt1OdUEfXNY9GZOjBLnF2WoeTN5JWPpahZwRT0JGDMmOjeQfxscrSkrBwGZOYuhs7jMoero3Qs50cHBTGpi59UB7al9vBqdWuGXWD2UFYu6mT1EJQOEUp4ajpGogZOOZXbAj9y16Ttj~W~OgCsAI~YFa2LrrXiIB30ADQLPpKrucJBynLLPl7N6JomWAq~7TKFA1SDLdoHnm0yhzPW38gi9PXESAXLY6os-fhNxDljrUilPorjO4Aq4ZmSDggOq33X594puoloA4yqZrflsgRabNbLUQ-UzbqrxldlCtOWxWkgUZuVSAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -351,7 +453,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="other-industries">
+                    <div class="other-industries ">
                         <img class="other-industries-img"
                             src="https://s3-alpha-sig.figma.com/img/7dd7/0509/aa1350f67193e936db8853080ec194d4?Expires=1703462400&Signature=MxdDqrRphT8d4IvrM3NtcROHwAMNlcsWHTRKMJY5eOGbozBJCs7wqMMSGEX~YbAyg70r1gOmD92iLzjJnd4d6Uok-n3GYeE7G590yo2PghMG0c1S9GkPvxfNjzw8gMy4TPM1HS-RTCQcaNgeeKP6e1milxzq-4cxDxHgAnKvY1suzVl9P2luxv~L7sDHoeKq8f938lBapT4miABsN1omk9Vbn20l6X2nHwvSRP~QCqM-KnWiKpjiiUwOAlWuYqikR3LUK2xU~OOKC~g-fMgCWbgR6uajKvCC8KBQVlGOnHDi5Ey1ZTm83v~yQf6xfaFRtrRD-xix01TDFaIFQ5eO3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="">
@@ -367,8 +469,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
         </div>
 
         <div class="footer">
