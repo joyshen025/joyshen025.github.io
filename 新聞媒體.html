@@ -14,6 +14,34 @@
         padding: 0;
     }
 
+    .container-text p {
+        color: #4d4d4d;
+        text-align: left;
+    }
+    a span{
+        color: #4d4d4d;
+    }
+
+    h3::after {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3::before{
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+
     .header {
         margin: 15px 5%;
         text-align: left;
@@ -59,6 +87,7 @@
         box-sizing: border-box;
     }
 
+
     .container-card {
         max-width: 100%;
         text-align: center;
@@ -90,11 +119,10 @@
         background-color: #1c5e70;
         padding: 3%;
     }
-
-    .footer {
-        justify-content: space-between;
+    .footer{
         display: flex;
     }
+  
 
     .footer-text {
         display: flex;
@@ -104,18 +132,19 @@
 
     .footer-text p {
         font-size: 12px;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
 
-    .footer-text>div {
-        margin-right: 20px;
+    .footer-text div {
+        margin-right:5% ;
         text-align: left;
     }
 
     .footer-text span {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
     }
+
     h3 {
         font-weight: bold;
         padding: 15px 0;
@@ -213,14 +242,18 @@
         .icon-card a:nth-child(n+4) {
             display: none;
         }
-
-        
+  
         .footer-card {
             display: block;
         }
 
         .footer-text {
             margin-top: 80px;
+        }
+        
+        .footer-text{
+            width: 100%;
+            justify-content: space-between;
         }
 
         .other img {
@@ -255,10 +288,16 @@
             background-color: #ffffff;
             opacity: 1;
         }
-        .copy-right-hr{
+
+        .copy-right-hr {
             margin-top: 5px;
-            padding-right: 1%;
-            width: 70%;
+            width: 100%;
+        }
+        .qrcode{
+            margin-left: 50px;
+        }
+        .footer{
+            display: block;
         }
     }
 </style>
@@ -271,7 +310,8 @@
                 <div class="logo">
                     <h1>
                         <a href="./首頁.html">
-                            <img src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
+                            <img src="https://i.ibb.co/sm38tbc/LOGO.png"   
+                                alt="五泰不動產">
                         </a>
 
                     </h1>
@@ -296,7 +336,9 @@
                 <nav class="navbar navbar-dark bg-white fixed-top">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="./首頁.html">
-                            <img width="250px" src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
+                            <img style="width: 90px;"
+                                src="https://i.ibb.co/k2RSTSD/LOGO.png"
+                                alt="五泰不動產">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
@@ -400,7 +442,7 @@
             </div>
             <div class="news-card" style="background-color: white;">
                 <div class="container-banner ">
-                    <h3>各界肯定</h3>
+                    <h3>集團訊息</h3>
                 </div>
                 <div class="news">
                     <div class="other-industries ">
@@ -453,7 +495,7 @@
             </div>
             <div class="news-card">
                 <div class="container-banner ">
-                    <h3>各界肯定</h3>
+                    <h3>媒體報導</h3>
                 </div>
                 <div class="news">
                     <div class="other-industries ">
@@ -516,7 +558,7 @@
                             alt="五泰不動產">
                     </h1>
                 </div>
-                <div class="footer-text col-xl-12">
+                <div class="footer-text">
                     <div>
                         <p><span>隱私權政策</span></p>
                         <p><span>網站地圖</span></p>
@@ -550,11 +592,11 @@
             <div class="copy-right">
                 <div class="copy-right-hr">
                     <hr>
-                    <p style="color: white;">CopyRight 2023 五泰不動產</p>
+                    <p style="color: white; font-size: 12px;">CopyRight 2023 五泰不動產</p>
                 </div>
-                <div>
+                <div class="qrcode">
                     <img style="width: 100%;"
-                        src="https://s3-alpha-sig.figma.com/img/1b17/856a/e070dcd5cd0912559902b57dc6410b78?Expires=1703462400&Signature=VwEq6CmLAi9iVFC3B00XQ-loDjoXDU3WhbYqsrftP8JZ9VqpCod2-UFsMlNTI5d6xnXUzALYptRv0k33kL43W-2dffFqXzbTq~DJVOAi9P3ZrXYgALeABRVLcLtIZEipwits1bHoBDiIe6lnXLBLq7neUOqHQDybJ~6W45PRamDF5xouE277M9z3FKZuiia3gFe4KtKGb68W7iZKq7mVLF~fjqB02ETGRTlujok9SYAF0JRxkPxOQO3ywgpt~AtwkTUmlR19MDhvKZU5fjG3~O0vNCLaAXMf8yOnGNkm3vB1R6~tk5D9YkRagUklEBUR8pFh0KfowHM7Mu56T3jN3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        src="https://s3-alpha-sig.figma.com/img/e581/fdc1/fd3b88c54b40ff37fbb75363a857e37a?Expires=1703462400&Signature=TWhV5lZagIOsGhblEl04Kvz4~54FhKARy-PznRyCHrGvxnRe0kRREEKNPoSnkS5njySxig4WGp3UowOXfOHhMzNgN-N-zMYXqmYQ-I6Jwihwgp4SaAYTmTJwgup5mjUg5wP338q0MmQqKmUzfRQJOgXIkmuWLZfbs~~w4mynEZes3XcvaWugbn24VQ8kFhUObHaw8VI2nT7~JRdAYtG1IOxqGI5rJpfW8P6sjOKGMfVUdFqAmVfG9BltNrKZ7dXtVkXPoymx6hWXevlmBWhgMQdgYePUXX0niRZ0xH~0r5i96u-bE4vNs4fWAiLo33j2ok5BobjN0gCqUTm9SQleQQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                         alt="">
                 </div>
             </div>

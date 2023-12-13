@@ -14,6 +14,34 @@
         padding: 0;
     }
 
+    .container-text p {
+        color: #4d4d4d;
+        text-align: left;
+    }
+    a span{
+        color: #4d4d4d;
+    }
+
+    h3::after {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3::before{
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+
     .header {
         margin: 15px 5%;
         text-align: left;
@@ -59,6 +87,7 @@
         box-sizing: border-box;
     }
 
+
     .container {
         max-width: 500px;
         overflow: hidden;
@@ -80,11 +109,10 @@
         background-color: #1c5e70;
         padding: 3%;
     }
-
-    .footer {
-        justify-content: space-between;
+    .footer{
         display: flex;
     }
+  
 
     .footer-text {
         display: flex;
@@ -94,16 +122,16 @@
 
     .footer-text p {
         font-size: 12px;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
 
-    .footer-text>div {
-        margin-right: 20px;
+    .footer-text div {
+        margin-right:5% ;
         text-align: left;
     }
 
     .footer-text span {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
     }
 
@@ -157,7 +185,6 @@
     }
 
     img {
-        width: 100%;
         object-fit: cover;
     }
 
@@ -214,6 +241,11 @@
         .footer-text {
             margin-top: 80px;
         }
+        
+        .footer-text{
+            width: 100%;
+            justify-content: space-between;
+        }
 
         .other img {
             height: 137px;
@@ -247,11 +279,18 @@
             background-color: #ffffff;
             opacity: 1;
         }
-        .copy-right-hr{
+
+        .copy-right-hr {
             margin-top: 5px;
-            padding-right: 1%;
-            width: 70%;
+            width: 100%;
         }
+        .qrcode{
+            margin-left: 50px;
+        }
+        .footer{
+            display: block;
+        }
+
     }
 </style>
 
@@ -263,9 +302,10 @@
                 <div class="logo">
                     <h1>
                         <a href="./首頁.html">
-                            <img src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
+                            <img src="https://i.ibb.co/sm38tbc/LOGO.png"   
+                                alt="五泰不動產">
                         </a>
-    
+
                     </h1>
                 </div>
                 <div class="meun">
@@ -283,51 +323,54 @@
                     </li>
                 </div>
             </div>
-            
+
             <div class="phone" style="margin-bottom: 100px;">
-            <nav class="navbar navbar-dark bg-white fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./首頁.html">
-                        <img width="250px" src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
-                    <span class="navbar-toggler-icon" style="color: grey;"></span>
-                </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="./集團簡介.html">集團簡介</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="">人才招募</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-success" type="submit">Search</button>
-                            </form>
+                <nav class="navbar navbar-dark bg-white fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./首頁.html">
+                            <img style="width: 90px;"
+                                src="https://i.ibb.co/k2RSTSD/LOGO.png"
+                                alt="五泰不動產">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
+                            <span class="navbar-toggler-icon" style="color: grey;"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./集團簡介.html">集團簡介</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">人才招募</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
             </div>
 
 
@@ -340,7 +383,7 @@
                 </div>
                 <div class="container">
                     <div class="container-img">
-                        <img src="https://s3-alpha-sig.figma.com/img/f5a7/240a/183e6674056c9d09b8f1bc1ae3eb8b38?Expires=1703462400&Signature=FZu6Og-wlZb3PEpZJ9F~7XoZBfiK~pSsAKr5P121raZZ2tfHIxU~etGMKethoqmdo8Eb9Zl~~rYyvpYSxElFCYlMev2cyoIlrB8IwWmvz0QuXw1gjiRC58PdyWyX-PrE-AVFvD3D0FjEg3jnNjZYlNVTtTTwdnlagmvGpguVoGQK5w5GjvW65xeAXR37CotCggXKMIaAyMm3bwwGbM6CI2DJoom20KNIPFTjDSG6z3dASrYTaX4xHppMQF2lyVmIGLRyqB1nLD4x54HTR00apsaSNG2At5a2Y2u5dHfCNVtqzUnKnf0-RR9DlbzVbd1HOk7ZPTFTuiIH-Q-V5dYIIw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        <img src="https://i.ibb.co/yf9YQM4/Snipaste-2023-12-13-12-23-28.png"
                             alt="">
                     </div>
 
@@ -362,7 +405,7 @@
                         <p style="text-align: left;">離白做拱其熱灣打離白做拱其熱灣打離白熱灣打離白做拱其熱灣打</p>
                     </div>                    
                     <div class="container-img col-5" >
-                        <img style="width: 100%;" src="https://s3-alpha-sig.figma.com/img/fc65/4eeb/085cf3374fb44844ef3414935a8844c2?Expires=1703462400&Signature=bBvZflc-rIv0Ib0nYMe5lfLHj5nOjjig~OXqs6H0DbItjzTotBPEP4kZNZbKSKPJKU84SRrpL-P9oG58PSKVaBkYDNZr8ySdVnuIlxXK05ZgIdKZJxP4gTjVxu3dsZe0~9WonWBCrFJsqYGnXAcjM1Bap8oDL3P88RilR7Olun~AJ289DB6JhvPq8YDeD0MUW~vv0Sic7J1YRwhNAfCcIMzCsa1euBgp~hIAKJwepNn6D2J1Ef3qdq8ml62R7sAXT6xY-WXJlfPLoGgC5OQoDy~z6TiWKjq5z-owfiLdYRNYA0DfOJ7tELkXWPDCJghjXBvwZEauWQg0qvlovtoDOA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                        <img style="width: 80%;" src="https://s3-alpha-sig.figma.com/img/fc65/4eeb/085cf3374fb44844ef3414935a8844c2?Expires=1703462400&Signature=bBvZflc-rIv0Ib0nYMe5lfLHj5nOjjig~OXqs6H0DbItjzTotBPEP4kZNZbKSKPJKU84SRrpL-P9oG58PSKVaBkYDNZr8ySdVnuIlxXK05ZgIdKZJxP4gTjVxu3dsZe0~9WonWBCrFJsqYGnXAcjM1Bap8oDL3P88RilR7Olun~AJ289DB6JhvPq8YDeD0MUW~vv0Sic7J1YRwhNAfCcIMzCsa1euBgp~hIAKJwepNn6D2J1Ef3qdq8ml62R7sAXT6xY-WXJlfPLoGgC5OQoDy~z6TiWKjq5z-owfiLdYRNYA0DfOJ7tELkXWPDCJghjXBvwZEauWQg0qvlovtoDOA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
                     </div>
                 </div>
             </div>
@@ -406,7 +449,7 @@
                             alt="五泰不動產">
                     </h1>
                 </div>
-                <div class="footer-text col-xl-12">
+                <div class="footer-text">
                     <div>
                         <p><span>隱私權政策</span></p>
                         <p><span>網站地圖</span></p>
@@ -440,11 +483,11 @@
             <div class="copy-right">
                 <div class="copy-right-hr">
                     <hr>
-                    <p style="color: white;">CopyRight 2023 五泰不動產</p>
+                    <p style="color: white; font-size: 12px;">CopyRight 2023 五泰不動產</p>
                 </div>
-                <div>
+                <div class="qrcode">
                     <img style="width: 100%;"
-                        src="https://s3-alpha-sig.figma.com/img/1b17/856a/e070dcd5cd0912559902b57dc6410b78?Expires=1703462400&Signature=VwEq6CmLAi9iVFC3B00XQ-loDjoXDU3WhbYqsrftP8JZ9VqpCod2-UFsMlNTI5d6xnXUzALYptRv0k33kL43W-2dffFqXzbTq~DJVOAi9P3ZrXYgALeABRVLcLtIZEipwits1bHoBDiIe6lnXLBLq7neUOqHQDybJ~6W45PRamDF5xouE277M9z3FKZuiia3gFe4KtKGb68W7iZKq7mVLF~fjqB02ETGRTlujok9SYAF0JRxkPxOQO3ywgpt~AtwkTUmlR19MDhvKZU5fjG3~O0vNCLaAXMf8yOnGNkm3vB1R6~tk5D9YkRagUklEBUR8pFh0KfowHM7Mu56T3jN3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        src="https://s3-alpha-sig.figma.com/img/e581/fdc1/fd3b88c54b40ff37fbb75363a857e37a?Expires=1703462400&Signature=TWhV5lZagIOsGhblEl04Kvz4~54FhKARy-PznRyCHrGvxnRe0kRREEKNPoSnkS5njySxig4WGp3UowOXfOHhMzNgN-N-zMYXqmYQ-I6Jwihwgp4SaAYTmTJwgup5mjUg5wP338q0MmQqKmUzfRQJOgXIkmuWLZfbs~~w4mynEZes3XcvaWugbn24VQ8kFhUObHaw8VI2nT7~JRdAYtG1IOxqGI5rJpfW8P6sjOKGMfVUdFqAmVfG9BltNrKZ7dXtVkXPoymx6hWXevlmBWhgMQdgYePUXX0niRZ0xH~0r5i96u-bE4vNs4fWAiLo33j2ok5BobjN0gCqUTm9SQleQQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                         alt="">
                 </div>
             </div>

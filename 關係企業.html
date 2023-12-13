@@ -7,11 +7,41 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-     * {
+    * {
         margin: 0;
         padding: 0;
+    }
+
+    .container-text p {
+        color: #4d4d4d;
+        text-align: left;
+    }
+
+    a span {
+        color: #4d4d4d;
+    }
+
+    h3::after {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3::before {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 50px;
+        background-color: black;
+        margin-right: 30px;
+        margin-bottom: 10px;
     }
 
     .header {
@@ -59,12 +89,13 @@
         box-sizing: border-box;
     }
 
+
     .container {
         max-width: 500px;
         overflow: hidden;
         padding: 15px 0;
     }
-    
+
 
     .container img {
         width: 100%;
@@ -82,9 +113,9 @@
     }
 
     .footer {
-        justify-content: space-between;
         display: flex;
     }
+
 
     .footer-text {
         display: flex;
@@ -94,18 +125,19 @@
 
     .footer-text p {
         font-size: 12px;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
 
-    .footer-text>div {
-        margin-right: 20px;
+    .footer-text div {
+        margin-right: 5%;
         text-align: left;
     }
 
     .footer-text span {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
     }
+
     h3 {
         font-weight: bold;
         padding: 15px 0;
@@ -156,7 +188,6 @@
     }
 
     img {
-        width: 100%;
         object-fit: cover;
     }
 
@@ -184,6 +215,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     hr {
         border: 1px solid #ffffff;
         background-color: #ffffff;
@@ -205,7 +237,6 @@
             display: none;
         }
 
-       
         .footer-card {
             display: block;
         }
@@ -214,9 +245,15 @@
             margin-top: 80px;
         }
 
+        .footer-text {
+            width: 100%;
+            justify-content: space-between;
+        }
+
         .other img {
             height: 137px;
         }
+
 
     }
 
@@ -236,6 +273,7 @@
             width: 30%;
             margin: 10px;
         }
+
         .copy-right {
             display: flex;
             justify-content: space-between;
@@ -246,13 +284,43 @@
             background-color: #ffffff;
             opacity: 1;
         }
-        .copy-right-hr{
+
+        .copy-right-hr {
             margin-top: 5px;
-            padding-right: 1%;
-            width: 70%;
+            width: 100%;
+        }
+
+        .qrcode {
+            margin-left: 50px;
+        }
+
+        .footer {
+            display: block;
         }
     }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <body>
 
@@ -262,9 +330,9 @@
                 <div class="logo">
                     <h1>
                         <a href="./首頁.html">
-                            <img src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
+                            <img src="https://i.ibb.co/sm38tbc/LOGO.png" alt="五泰不動產">
                         </a>
-    
+
                     </h1>
                 </div>
                 <div class="meun">
@@ -282,51 +350,52 @@
                     </li>
                 </div>
             </div>
-            
+
             <div class="phone" style="margin-bottom: 100px;">
-            <nav class="navbar navbar-dark bg-white fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./首頁.html">
-                        <img width="250px" src="https://s3-alpha-sig.figma.com/img/6aee/3468/0e34b9710c424001df36c65d40ac37d7?Expires=1703462400&Signature=OrT-a5ZZqm7E5zLovUgLRWsglx-nBfIMJHBwIk5Hy8Bz0Dis~syciqsKfd9BQ34l3IooACMbCzuI~QP~IOce2jL8WDiqbwug2KRuBpnP6y8ggOgSbvqq0zSaEYglT06H7AjXs0xO~M2JoFy0DhMLp7AI~a3TS6j3RF3E1WuNyEvl6yxHMIUXFCV0qJhHSk~B17MeXcIwF4zFixzoehk70nP2sAxAluPQ763fEHJsbJZHctf2N~g~lkBoG1lEaGjFWCr58twq~7BpXOU8WJn3RGQY8QxtoMJivxV33dc-Y0TFvOTzw-KUNPm~7gxp2ciF4GJ~lzPSgMbI4Z42JzqMNg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="五泰不動產">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
-                    <span class="navbar-toggler-icon" style="color: grey;"></span>
-                </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="./集團簡介.html">集團簡介</a>
-                                </li>
-                                <li  class="nav-item">
-                                    <a class="nav-link" href="">人才招募</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-success" type="submit">Search</button>
-                            </form>
+                <nav class="navbar navbar-dark bg-white fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./首頁.html">
+                            <img style="width: 90px;" src="https://i.ibb.co/k2RSTSD/LOGO.png" alt="五泰不動產">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation" style="background-color: lightgrey; color: grey;">
+                            <span class="navbar-toggler-icon" style="color: grey;"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">五泰不動產</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./首頁.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./集團簡介.html">集團簡介</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./人才招募.html">人才招募</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./關係企業.html">關係企業及社會責任</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./新聞媒體.html">新聞媒體</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
             </div>
 
 
@@ -351,58 +420,114 @@
                 </div>
             </div>
 
-            <div class="news" style=" background-color: white;">
-                <div class="other-industries">
-                    <img class="other-industries-img" src="https://s3-alpha-sig.figma.com/img/65b5/d3ea/6add7a3119dcddaff0bf6c64dcfc002b?Expires=1703462400&Signature=lobcPKViRonnjtukEDbp5ocC9yqd833J2ELw0VJ7k-KxFG1q9hE3ng9b4L-wh1EmGCE8xFWa7igTAqT3zO1IMppgXJHONhX6pdgQNNhFO9O12tVqynwhwsESNpTbrqFzQX4Xl7ImKNtckzTND77ug~sl7whdBkc2D~IF5TuUGJOzTSD~KOmduUbkspYTu5AkQVTCVzMnoZkajl6LSSGjd2WNtKpweRi8SViTGO78OCVy1-lg7yo90JQzltpUVzJft7goOQP9jXsYDd-DPIBewcVSjNdeqA0XvexCHgmf7h00PpAKjWy-qF0~o25ayPru~vMBKXjLbO-RiTQDYbOmTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="">
-
-
-                    <div style="display: flex; padding-top: 15px;">
-                        <div style="width: 300px;">
-                            <img src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
-                                alt="">
-                        </div>
-                        <div style="padding-left: 15px;">
-                            <h5>五泰房屋仲介有限公司</h5>
-                            <p>
-                                Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-industries">
-                    <img class="other-industries-img" src="https://s3-alpha-sig.figma.com/img/217b/3603/00c95f8a2a1b60c06c6fc46b77a3c280?Expires=1703462400&Signature=dqIF9OhNSHeoNmCmtbYfITYg~EfbNzgF7pt1OdUEfXNY9GZOjBLnF2WoeTN5JWPpahZwRT0JGDMmOjeQfxscrSkrBwGZOYuhs7jMoero3Qs50cHBTGpi59UB7al9vBqdWuGXWD2UFYu6mT1EJQOEUp4ajpGogZOOZXbAj9y16Ttj~W~OgCsAI~YFa2LrrXiIB30ADQLPpKrucJBynLLPl7N6JomWAq~7TKFA1SDLdoHnm0yhzPW38gi9PXESAXLY6os-fhNxDljrUilPorjO4Aq4ZmSDggOq33X594puoloA4yqZrflsgRabNbLUQ-UzbqrxldlCtOWxWkgUZuVSAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="">
-
-                        <div style="display: flex; padding-top: 15px;">
-                        <div style="width: 300px;">
-                            <img src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
-                                alt="">
-                        </div>
-                        <div style="padding-left: 15px;">
-                            <h5>五泰房屋仲介有限公司</h5>
-                            <p>
-                                Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-industries">
-                    <img class="other-industries-img" src="https://s3-alpha-sig.figma.com/img/7dd7/0509/aa1350f67193e936db8853080ec194d4?Expires=1703462400&Signature=MxdDqrRphT8d4IvrM3NtcROHwAMNlcsWHTRKMJY5eOGbozBJCs7wqMMSGEX~YbAyg70r1gOmD92iLzjJnd4d6Uok-n3GYeE7G590yo2PghMG0c1S9GkPvxfNjzw8gMy4TPM1HS-RTCQcaNgeeKP6e1milxzq-4cxDxHgAnKvY1suzVl9P2luxv~L7sDHoeKq8f938lBapT4miABsN1omk9Vbn20l6X2nHwvSRP~QCqM-KnWiKpjiiUwOAlWuYqikR3LUK2xU~OOKC~g-fMgCWbgR6uajKvCC8KBQVlGOnHDi5Ey1ZTm83v~yQf6xfaFRtrRD-xix01TDFaIFQ5eO3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="">
-
-                        <div style="display: flex; padding-top: 15px;">
-                            <div style="width: 300px;">
-                                <img src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+            <div class="container-card news" style="display: flex; background-color: white;">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="display: block;">
+                            <div>
+                                <img src="https://s3-alpha-sig.figma.com/img/0741/4dec/4d9f51ea3b7580c4125d0e55f261c483?Expires=1703462400&Signature=XI-GuJFvDpxe7T-Ll2p02f0d7w56XooHMKxnL28K~cL4yhI6uo9q962Sh8cXUW4KQaCK-wqc-S-JyWGAZte61w45mNn5wSOaHPGsVsrxZrOkMfAKoOuKW0FgDVeBNp4RmVTTzcGogSxJoCoiR73jn3E37P8Syzo4Dc7gaclzTX1xHG8hgnQp0bQY7xZei7KBSamNhnwvsDVsIQ~7u8mIzN60ktDSd-ACpfJW2Cmokbav2gbtyAmJe9BkPz4TRgRaG9hgIV492P5G127XONT6SJlWi1lBar0QMKtqyM8R7Ld5PfjeFqWU~GKEzusyP5PoZY8fn6HWBf2H8GHcMUakcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                                     alt="">
                             </div>
-                            <div style="padding-left: 15px;">
-                                <h5>五泰房屋仲介有限公司</h5>
-                                <p>
-                                    Provident, accusantium aliquam eius in molestias facere optio corrupti magni accusamus.
-                                </p>
+                            <div style="display: flex; padding-top:40px;">
+                                <div style="width: 150px;">
+                                    <img style="width: auto; max-width: 100%; height: auto;"
+                                        src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                        alt="">
+                                </div>
+                                <div style="text-align: left; margin-left: 15px;">
+                                    <h2 style="font-size: 20px; text-align: left; font-weight: bold;">五泰房屋仲介有限公司</h2>
+                                    <p style="text-align: left;">ssadsadasdsdasdasdkfjlsdnf</p>
+                                </div>
+                            </div>
+                            <div class="container-button" style="margin: 40px;">
+                                <a class="button" style="padding: 6px 20%;" href=""><span>連結官網</span></a>
                             </div>
                         </div>
+                        <div class="swiper-slide" style="display: block;">
+                            <div>
+                                <img src="https://s3-alpha-sig.figma.com/img/0741/4dec/4d9f51ea3b7580c4125d0e55f261c483?Expires=1703462400&Signature=XI-GuJFvDpxe7T-Ll2p02f0d7w56XooHMKxnL28K~cL4yhI6uo9q962Sh8cXUW4KQaCK-wqc-S-JyWGAZte61w45mNn5wSOaHPGsVsrxZrOkMfAKoOuKW0FgDVeBNp4RmVTTzcGogSxJoCoiR73jn3E37P8Syzo4Dc7gaclzTX1xHG8hgnQp0bQY7xZei7KBSamNhnwvsDVsIQ~7u8mIzN60ktDSd-ACpfJW2Cmokbav2gbtyAmJe9BkPz4TRgRaG9hgIV492P5G127XONT6SJlWi1lBar0QMKtqyM8R7Ld5PfjeFqWU~GKEzusyP5PoZY8fn6HWBf2H8GHcMUakcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                    alt="">
+                            </div>
+                            <div style="display: flex; padding-top:40px;">
+                                <div style="width: 150px;">
+                                    <img style="width: auto; max-width: 100%; height: auto;"
+                                        src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                        alt="">
+                                </div>
+                                <div style="text-align: left; margin-left: 15px;">
+                                    <h2 style="font-size: 20px; text-align: left; font-weight: bold;">五泰房屋仲介有限公司</h2>
+                                    <p style="text-align: left;">ssadsadasdsdasdasdkfjlsdnf</p>
+                                </div>
+                            </div>
+                            <div class="container-button" style="margin: 40px;">
+                                <a class="button" style="padding: 6px 20%;" href=""><span>連結官網</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="display: block;">
+                            <div>
+                                <img src="https://s3-alpha-sig.figma.com/img/0741/4dec/4d9f51ea3b7580c4125d0e55f261c483?Expires=1703462400&Signature=XI-GuJFvDpxe7T-Ll2p02f0d7w56XooHMKxnL28K~cL4yhI6uo9q962Sh8cXUW4KQaCK-wqc-S-JyWGAZte61w45mNn5wSOaHPGsVsrxZrOkMfAKoOuKW0FgDVeBNp4RmVTTzcGogSxJoCoiR73jn3E37P8Syzo4Dc7gaclzTX1xHG8hgnQp0bQY7xZei7KBSamNhnwvsDVsIQ~7u8mIzN60ktDSd-ACpfJW2Cmokbav2gbtyAmJe9BkPz4TRgRaG9hgIV492P5G127XONT6SJlWi1lBar0QMKtqyM8R7Ld5PfjeFqWU~GKEzusyP5PoZY8fn6HWBf2H8GHcMUakcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                    alt="">
+                            </div>
+                            <div style="display: flex; padding-top:40px;">
+                                <div style="width: 150px;">
+                                    <img style="width: auto; max-width: 100%; height: auto;"
+                                        src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                        alt="">
+                                </div>
+                                <div style="text-align: left; margin-left: 15px;">
+                                    <h2 style="font-size: 20px; text-align: left; font-weight: bold;">五泰房屋仲介有限公司</h2>
+                                    <p style="text-align: left;">ssadsadasdsdasdasdkfjlsdnf</p>
+                                </div>
+                            </div>
+                            <div class="container-button" style="margin: 40px;">
+                                <a class="button" style="padding: 6px 20%;" href=""><span>連結官網</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="display: block;">
+                            <div>
+                                <img src="https://s3-alpha-sig.figma.com/img/0741/4dec/4d9f51ea3b7580c4125d0e55f261c483?Expires=1703462400&Signature=XI-GuJFvDpxe7T-Ll2p02f0d7w56XooHMKxnL28K~cL4yhI6uo9q962Sh8cXUW4KQaCK-wqc-S-JyWGAZte61w45mNn5wSOaHPGsVsrxZrOkMfAKoOuKW0FgDVeBNp4RmVTTzcGogSxJoCoiR73jn3E37P8Syzo4Dc7gaclzTX1xHG8hgnQp0bQY7xZei7KBSamNhnwvsDVsIQ~7u8mIzN60ktDSd-ACpfJW2Cmokbav2gbtyAmJe9BkPz4TRgRaG9hgIV492P5G127XONT6SJlWi1lBar0QMKtqyM8R7Ld5PfjeFqWU~GKEzusyP5PoZY8fn6HWBf2H8GHcMUakcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                    alt="">
+                            </div>
+                            <div style="display: flex; padding-top:40px;">
+                                <div style="width: 150px;">
+                                    <img style="width: auto; max-width: 100%; height: auto;"
+                                        src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                        alt="">
+                                </div>
+                                <div style="text-align: left; margin-left: 15px;">
+                                    <h2 style="font-size: 20px; text-align: left; font-weight: bold;">五泰房屋仲介有限公司</h2>
+                                    <p style="text-align: left;">ssadsadasdsdasdasdkfjlsdnf</p>
+                                </div>
+                            </div>
+                            <div class="container-button" style="margin: 40px;">
+                                <a class="button" style="padding: 6px 20%;" href=""><span>連結官網</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="display: block;">
+                            <div>
+                                <img src="https://s3-alpha-sig.figma.com/img/0741/4dec/4d9f51ea3b7580c4125d0e55f261c483?Expires=1703462400&Signature=XI-GuJFvDpxe7T-Ll2p02f0d7w56XooHMKxnL28K~cL4yhI6uo9q962Sh8cXUW4KQaCK-wqc-S-JyWGAZte61w45mNn5wSOaHPGsVsrxZrOkMfAKoOuKW0FgDVeBNp4RmVTTzcGogSxJoCoiR73jn3E37P8Syzo4Dc7gaclzTX1xHG8hgnQp0bQY7xZei7KBSamNhnwvsDVsIQ~7u8mIzN60ktDSd-ACpfJW2Cmokbav2gbtyAmJe9BkPz4TRgRaG9hgIV492P5G127XONT6SJlWi1lBar0QMKtqyM8R7Ld5PfjeFqWU~GKEzusyP5PoZY8fn6HWBf2H8GHcMUakcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                    alt="">
+                            </div>
+                            <div style="display: flex; padding-top:40px;">
+                                <div style="width: 150px;">
+                                    <img style="width: auto; max-width: 100%; height: auto;"
+                                        src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                        alt="">
+                                </div>
+                                <div style="text-align: left; margin-left: 15px;">
+                                    <h2 style="font-size: 20px; text-align: left; font-weight: bold;">五泰房屋仲介有限公司</h2>
+                                    <p style="text-align: left;">ssadsadasdsdasdasdkfjlsdnf</p>
+                                </div>
+                            </div>
+                            <div class="container-button" style="margin: 40px;">
+                                <a class="button" style="padding: 6px 20%;" href=""><span>連結官網</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <div class="swiper-pagination"></div>
+                    </div>
+
                 </div>
             </div>
 
@@ -425,20 +550,22 @@
                 <div class="container">
                     <img src="https://s3-alpha-sig.figma.com/img/9362/f4ce/7128a7363771b7882c36d8231845e982?Expires=1703462400&Signature=F~P7NoIQd5L9NY9GQDt305EAcEQVy0~69aD6veMjBWSfaQY6BUlUdmQFeBE95Y52NqD8y52CqEXwsq2Kwix3YtGnuRRDMtDreerVmH~dbxzTjV5Du67FIQabRsW~U4P7oszUqp0t5NjrAgNPSaQ5A~8teFW27u4yRrP1GtfBXQpT6M9gaBlAdlQwuYEqDw7yck3OgbJ4~qhhPzqchi7hu7wZzqNh-62buUknn5DeIWSf4ERfLRzrDpu1h9513HCOeoT1jDoP4Jn7LhYyGpJJdIfncAqnAhD588uKaAUDwiCQCiGEFv1Pdqs-sANugDpb9EJilAFS3wShzwMwD8wxBA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                         alt="">
-                        <div class="container-text" style="display: flex;">
-                            <div style="width: 300px;">
-                                <img style="width: 100%;" src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg" alt="">
-                            </div>
-                            <div>
-                               <p style="width: 100%;">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius quasi! Provident, accusantium 
-                                
-                               </p>
-                            </div>
+                    <div class="container-text" style="display: flex;">
+                        <div style="width: 300px;">
+                            <img style="width: 100%;"
+                                src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                alt="">
                         </div>
+                        <div>
+                            <p style="width: 100%;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius
+                                quasi! Provident, accusantium
+
+                            </p>
+                        </div>
+                    </div>
                     <div class="container-button">
-                        <a class="button" style="padding: 6px 100px;" href=""><span
-                                style="color: black;">更多資訊</span></a>
+                        <a class="button" style="padding: 6px 100px;" href=""><span>更多資訊</span></a>
                     </div>
                 </div>
                 <div class="container">
@@ -446,17 +573,19 @@
                         alt="">
                     <div class="container-text" style="display: flex;">
                         <div style="width: 300px;">
-                            <img style="width: 100%;" src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg" alt="">
+                            <img style="width: 100%;"
+                                src="https://blog.wutaihouse.com.tw/hubfs/raw_assets/public/WutaiHouse_September2021/images/footer.svg"
+                                alt="">
                         </div>
                         <div>
-                           <p style="width: 100%;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius quasi! Provident, accusantium 
-                           </p>
+                            <p style="width: 100%;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda voluptas eius
+                                quasi! Provident, accusantium
+                            </p>
                         </div>
                     </div>
                     <div class="container-button">
-                        <a class="button" style="padding: 6px 100px;" href=""><span
-                                style="color: black;">更多資訊</span></a>
+                        <a class="button" style="padding: 6px 100px;" href=""><span>更多資訊</span></a>
                     </div>
                 </div>
             </div>
@@ -470,7 +599,7 @@
                             alt="五泰不動產">
                     </h1>
                 </div>
-                <div class="footer-text col-xl-12">
+                <div class="footer-text">
                     <div>
                         <p><span>隱私權政策</span></p>
                         <p><span>網站地圖</span></p>
@@ -504,11 +633,11 @@
             <div class="copy-right">
                 <div class="copy-right-hr">
                     <hr>
-                    <p style="color: white;">CopyRight 2023 五泰不動產</p>
+                    <p style="color: white; font-size: 12px;">CopyRight 2023 五泰不動產</p>
                 </div>
-                <div>
+                <div class="qrcode">
                     <img style="width: 100%;"
-                        src="https://s3-alpha-sig.figma.com/img/1b17/856a/e070dcd5cd0912559902b57dc6410b78?Expires=1703462400&Signature=VwEq6CmLAi9iVFC3B00XQ-loDjoXDU3WhbYqsrftP8JZ9VqpCod2-UFsMlNTI5d6xnXUzALYptRv0k33kL43W-2dffFqXzbTq~DJVOAi9P3ZrXYgALeABRVLcLtIZEipwits1bHoBDiIe6lnXLBLq7neUOqHQDybJ~6W45PRamDF5xouE277M9z3FKZuiia3gFe4KtKGb68W7iZKq7mVLF~fjqB02ETGRTlujok9SYAF0JRxkPxOQO3ywgpt~AtwkTUmlR19MDhvKZU5fjG3~O0vNCLaAXMf8yOnGNkm3vB1R6~tk5D9YkRagUklEBUR8pFh0KfowHM7Mu56T3jN3A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        src="https://s3-alpha-sig.figma.com/img/e581/fdc1/fd3b88c54b40ff37fbb75363a857e37a?Expires=1703462400&Signature=TWhV5lZagIOsGhblEl04Kvz4~54FhKARy-PznRyCHrGvxnRe0kRREEKNPoSnkS5njySxig4WGp3UowOXfOHhMzNgN-N-zMYXqmYQ-I6Jwihwgp4SaAYTmTJwgup5mjUg5wP338q0MmQqKmUzfRQJOgXIkmuWLZfbs~~w4mynEZes3XcvaWugbn24VQ8kFhUObHaw8VI2nT7~JRdAYtG1IOxqGI5rJpfW8P6sjOKGMfVUdFqAmVfG9BltNrKZ7dXtVkXPoymx6hWXevlmBWhgMQdgYePUXX0niRZ0xH~0r5i96u-bE4vNs4fWAiLo33j2ok5BobjN0gCqUTm9SQleQQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                         alt="">
                 </div>
             </div>
@@ -519,6 +648,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, 
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                460: {
+                    slidesPerView: 2,
+                },
+                960: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
